@@ -1,0 +1,37 @@
+module randomizer_tb();
+	reg clk;
+	reg freq;
+	reg rst;
+	wire [7:0] LED;
+	wire enable_f; //disables the frequency module when LED is for 0.5s
+	wire [29:0] light_dur;
+
+reg [5:0] frequency;
+
+randomizer uut(.clk(clk), .freq(freq), .rst(rst), .LED(LED), .enable_f(enable_f), .light_dur(light_dur));
+
+always begin
+	if(frequency == 100)
+		frequency <= 0; 
+	#1 clk = ~clk;
+	frequency <= frequency + 1;
+end
+
+
+always begin
+	if(frequency == 100)
+		freq = enable_f;
+	else
+		freq = 0;
+end
+
+initial begin
+	frequency <= 0;
+	clk <= 0;
+	freq <= 0;
+	#5 rst <= 1;
+	#5 rst <= 0;
+
+end
+
+endmodule

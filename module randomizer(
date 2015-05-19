@@ -1,0 +1,49 @@
+module randomizer(
+	input clk,
+	input freq,
+	input rst,
+	output [7:0] LED,
+	output enable_f //disables the frequency module when LED is for 0.5s
+
+);
+
+	reg enable_freq;
+	reg [7:0] LED_num; //8 LEDs on the FPGA
+	reg [2:0] counter; //0 ~ 7
+	reg [29:0] light_duration; //how long the LED will be on (1 sec max) 
+	
+	assign LED = LED_num;
+	assign enable_f = enable_freq;
+
+	//counter register
+	always @(posedge clk or posedge rst) begin
+		if(rst) counter <= 0;
+		else begin
+			counter <= counter + 1;
+		end
+	end
+
+	//LED register
+	always @(posedge freq or posedge rst) begin
+		if(rst) LED_num <= 0;
+		else LED_num <= counter;
+	end
+
+	//enable_freq register
+	always @(posedge clk or posedge rst) begin
+		if(rst) enable_f <= 1;
+		else if(light_duration == 0x1DCD6500 or !light_duration) //enable frequency when light_duration expires
+			enable_f <= 1;
+		else //disable the frequency input
+			enable_f <= 0; 
+	end
+
+	//duration of clk
+	always @(posedge clk or posedge rst or posedge freq) begin
+		if(rst) light_duration = 0;
+		else if(freq) light_duration = 1;
+		else if(light_duration == 0x1DCD6500 or !light_duration) light_duration <= 0;
+		else light_duration <= light_duration + 1;
+	end
+
+endmodule

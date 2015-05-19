@@ -1,0 +1,73 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Regan/Desktop/ELF
+vfrequency
+Z0 !s110 1432029191
+!i10b 1
+!s100 `en0:h5[z?;aJG6b_m0aQ3
+I`Z=]JdiW[IzEc0B8iWJjG3
+Z1 V`JN@9S9cnhjKRR_L]QIcM3
+Z2 dC:/Users/Regan/Desktop/csm152a
+w1432027093
+8C:/Users/Regan/Desktop/csm152a/frequency.v
+FC:/Users/Regan/Desktop/csm152a/frequency.v
+L0 1
+Z3 OW;L;10.3c;59
+r1
+!s85 0
+31
+!s108 1432029191.172000
+!s107 C:/Users/Regan/Desktop/csm152a/frequency.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Regan/Desktop/csm152a/frequency.v|
+!s101 -O0
+!i113 1
+Z4 o-work work -O0
+vrandomizer
+!s110 1432029190
+!i10b 1
+!s100 S0kN<<GAPE?hcJ^lgQ:f01
+InK20=Ui1Pzfh8NcGd>L711
+R1
+R2
+w1432029186
+8C:/Users/Regan/Desktop/csm152a/randomizer.v
+FC:/Users/Regan/Desktop/csm152a/randomizer.v
+L0 11
+R3
+r1
+!s85 0
+31
+!s108 1432029190.962000
+!s107 C:/Users/Regan/Desktop/csm152a/randomizer.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Regan/Desktop/csm152a/randomizer.v|
+!s101 -O0
+!i113 1
+R4
+vrandomizer_tb
+R0
+!i10b 1
+!s100 j;VLHF<89iO8HJJ9cKF?W1
+I0YFZk8INYiTE=hR9Lg4WB3
+R1
+R2
+w1432018350
+8C:\Users\Regan\Desktop\csm152a\randomizer_tb.v
+FC:\Users\Regan\Desktop\csm152a\randomizer_tb.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1432029191.062000
+!s107 C:\Users\Regan\Desktop\csm152a\randomizer_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:\Users\Regan\Desktop\csm152a\randomizer_tb.v|
+!s101 -O0
+!i113 1
+R4
