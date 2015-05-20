@@ -1,15 +1,22 @@
-C:/Users/Regan/Desktop/csm152a/randomizer_tb.v {1 {vlog -work work -stats=none {C:\Users\Regan\Desktop\csm152a\randomizer_tb.v}
+C:/Users/Regan/Desktop/csm152a/randomizer.v {1 {vlog -work work -stats=none C:/Users/Regan/Desktop/csm152a/randomizer.v
+Model Technology ModelSim Microsemi vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module randomizer
+
+Top level modules:
+	randomizer
+
+} {} {}} C:/Users/Regan/Desktop/csm152a/randomizer_tb.v {1 {vlog -work work -stats=none C:/Users/Regan/Desktop/csm152a/randomizer_tb.v
 Model Technology ModelSim Microsemi vlog 10.3c Compiler 2014.07 Jul 19 2014
 -- Compiling module randomizer_tb
 
 Top level modules:
 	randomizer_tb
 
-} {} {}} C:/Users/Regan/Desktop/csm152a/frequency.v {1 {vlog -work work -stats=none C:/Users/Regan/Desktop/csm152a/frequency.v
+} {} {}} C:/Users/Regan/Desktop/csm152a/hit_or_miss.v {1 {vlog -work work -stats=none C:/Users/Regan/Desktop/csm152a/hit_or_miss.v
 Model Technology ModelSim Microsemi vlog 10.3c Compiler 2014.07 Jul 19 2014
--- Compiling module frequency
+-- Compiling module hit_or_miss
 
 Top level modules:
-	frequency
+	hit_or_miss
 
 } {} {}}

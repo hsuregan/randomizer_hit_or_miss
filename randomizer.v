@@ -9,7 +9,7 @@
 
 
 module randomizer(
-	//input token, //the amount of time it takes the player to flip the switch
+	input [7:0] token, //the amount of time it takes the player to flip the switch
 	input clk,
 	input freq,
 	input rst,
@@ -21,7 +21,7 @@ module randomizer(
 
 	reg enable_freq;
 	reg [7:0] LED_num; //8 LEDs on the FPGA
-	reg [8:0] generator;
+	reg [7:0] generator;
 	wire [2:0] index; //0 ~ 7
 	reg [29:0] light_duration; //how long the LED will be on (1 sec max) 
 	
@@ -35,7 +35,8 @@ module randomizer(
 		if(rst) generator <= 0;
 		else begin
 			generator <= generator + 1;
-			generator <= {generator[5:0], generator[8] ^ generator[7] , generator[7] ^ generator[6] , generator[6] ^ generator[5]};
+			generator <= generator ^ token;
+			//generator <= {generator[5:0], generator[8] ^ generator[7] , generator[7] ^ generator[6] , generator[6] ^ generator[5]};
 		end
 	end
 
@@ -55,15 +56,14 @@ module randomizer(
 	end
 
 	//enable_freq register
-	always @(posedge clk or posedge rst) begin
+	always @(posedge clk or posedge rst or posedge freq) begin
 		if(rst) enable_freq <= 1;
-
+		else if(freq) enable_freq <= 0; //disable frequency when freq is high
 		else if(!light_duration) //when LED expires, enable frequency
 			enable_freq <= 1;
 		else //disable the frequency input when LED is lit
 			enable_freq <= 0; 
 	end
-
 
 
 	//light duration logic
