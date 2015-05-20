@@ -36,7 +36,7 @@ module randomizer(
 */
 
 hit_or_miss uut2(.changed_bit_wire(changed_bit_wire), .clk(clk), .rst(rst), .switch(switch), .LED(LED), .token(token_wire), .hit(hit));
-frequency uut1(.clk(clk), .rst(rst), .freq(freq));
+frequency uut1(.clk(clk), .rst(rst), .freq(freq), .enable(enable_f));
 randomizer uut(.clk(clk), .rst(rst), .freq(freq), .LED(LED), .enable_f(enable_f), .light_dur(light_dur), .token(token_wire));
 
 always begin

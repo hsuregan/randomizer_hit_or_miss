@@ -35,7 +35,9 @@ module randomizer(
 		if(rst) generator <= 0;
 		else begin
 			generator <= generator + 1;
-			generator <= generator ^ token;
+			generator <= token;
+			//generator <= {generator[3:0] ^ token[3:0], generator[7:4] ^ token[6:3] };
+			//generator <= generator + 1;
 			//generator <= {generator[5:0], generator[8] ^ generator[7] , generator[7] ^ generator[6] , generator[6] ^ generator[5]};
 		end
 	end
