@@ -50,6 +50,28 @@ r1
 !s101 -O0
 !i113 1
 R4
+vLFSR
+!s110 1432144366
+!i10b 1
+!s100 A8AT81kLbB9zIc<hjHJaA1
+I;gXU[Hk73XL0Bk6nl=X=G2
+R1
+R2
+w1432144352
+8C:/Users/Regan/Desktop/csm152a/LFSR.v
+FC:/Users/Regan/Desktop/csm152a/LFSR.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1432144366.688000
+!s107 C:/Users/Regan/Desktop/csm152a/LFSR.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Regan/Desktop/csm152a/LFSR.v|
+!s101 -O0
+!i113 1
+R4
+n@l@f@s@r
 vrandomizer
 R0
 !i10b 1
@@ -89,6 +111,27 @@ r1
 !s108 1432104984.849000
 !s107 C:/Users/Regan/Desktop/csm152a/randomizer_tb.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Regan/Desktop/csm152a/randomizer_tb.v|
+!s101 -O0
+!i113 1
+R4
+vtest
+!s110 1432144341
+!i10b 1
+!s100 MUL34HFGOP2kGgX?D?Wn81
+ILOkFSB7j7B0BWLk]B;A3F1
+R1
+R2
+w1432144335
+8C:/Users/Regan/Desktop/csm152a/test.v
+FC:/Users/Regan/Desktop/csm152a/test.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1432144341.534000
+!s107 C:/Users/Regan/Desktop/csm152a/test.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Regan/Desktop/csm152a/test.v|
 !s101 -O0
 !i113 1
 R4
