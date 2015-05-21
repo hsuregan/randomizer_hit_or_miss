@@ -1,6 +1,7 @@
 // Code your design here
 module freq(
-  input [2:0] difficulty,
+	input enable,
+	input [2:0] difficulty,
 	input clk,
 	input rst,
 	
@@ -21,10 +22,11 @@ module freq(
 		else counter <= counter + 1;
 	end
   
-  assign freq = (difficulty == 0) ? fourthHz : 
-    			(difficulty == 1) ? halfHz :
-    			(difficulty == 2) ? oneHz :
-    			(difficulty == 3) ? twoHz :
-    			(difficulty == 4) ? fourHz : fourthHz;
+  assign freq = (!enable) ? 0 :
+  		(difficulty == 0) ? fourthHz : 
+    		(difficulty == 1) ? halfHz :
+    		(difficulty == 2) ? oneHz :
+    		(difficulty == 3) ? twoHz :
+    		(difficulty == 4) ? fourHz : fourthHz;
 	
 endmodule
