@@ -1,5 +1,5 @@
 module LFSR (
-	input enable;
+	//input enable,
     input clock,
     input reset,
     output [12:0] rnd
@@ -43,6 +43,6 @@ begin
 end
  
  
-assign rnd = enable ? random_done : 0;
+assign rnd = random_done;//enable ? random_done : 0;
  
 endmodule
